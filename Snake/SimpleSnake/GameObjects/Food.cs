@@ -23,15 +23,15 @@ namespace SimpleSnake.GameObjects
 
         public void SetRandomPosition(Queue<Point> snake)
         {
-            LeftX = random.Next(1, wall.LeftX);
-            TopY = random.Next(1, wall.TopY);
+            LeftX = random.Next(1, wall.LeftX - 1);
+            TopY = random.Next(1, wall.TopY - 1);
 
             bool isSnakePoint = snake.Any(x => x.LeftX == LeftX && x.TopY == TopY);
 
             while (isSnakePoint)
             {
-                LeftX = random.Next(1, wall.LeftX);
-                TopY = random.Next(1, wall.TopY);
+                LeftX = random.Next(1, wall.LeftX - 1);
+                TopY = random.Next(1, wall.TopY - 1);
 
                 isSnakePoint = snake.Any(x => x.LeftX == LeftX && x.TopY == TopY);
             }
