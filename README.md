@@ -1,2 +1,2 @@
 # Games
-Contains some simple games
+Will add some simple games
